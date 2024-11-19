@@ -24,7 +24,7 @@ export default function SignIn() {
       console.log(response);
       if (response?.status === "success") {
         setWrongInfo(false)
-        router.push("/auth/signIn");
+        router.push("/notes");
       } else {
         console.log("here is the response", response?.status);
         setWrongInfo(true)
