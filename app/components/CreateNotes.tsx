@@ -4,7 +4,7 @@ import React from 'react'
 const CreateNotes = () => {
     const handleCreate= ()=>
     {
-
+      // implemented in the next feature branch 
 
     }
   return (

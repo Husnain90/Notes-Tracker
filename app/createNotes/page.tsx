@@ -14,15 +14,16 @@ export default function createNote() {
     category: string;
   }) => {
     try {
-      console.log("handle submission");
+  
       const data = await createNoteHandler(noteData);
-      console.log(data);
+
       if (data?.status === "success") {
         router.push("/notes");
         
       }
     } catch (err) {
-      console.log("error in the comp", err);
+      
+
     }
   };
   return (

@@ -21,9 +21,9 @@ const Notes = () => {
   }, []);
   return (
     <div>
-      {notes?.length > 0 ? (
+      { notes &&  notes.length > 0 ? (
         <ul className="flex flex-col gap-2">
-          {notes!.map((note) => (
+          {notes.map((note) => (
             <li key={note._id} className=" flex justify-around ">
               <div className="flex flex-col">
                 <h2 className="text-lg font-bold ">Title</h2>

@@ -10,7 +10,7 @@ interface props {
 const page = ({params}:props) => {
     const fetchData = async()=>{
         const data = await getNoteData(params.id)
-        console.log("im the data in the server ", data?.note.data)
+     
     }
 fetchData()
   return (

@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-// import { handleform } from "./actions";
 import { useRouter } from "next/navigation";
 import { Formik } from "formik";
 import { signInSchema } from "@/validationSchema/schema";
@@ -15,22 +14,22 @@ export default function SignIn() {
     email: string;
     password: string;
   }) => {
-    // console.log("the cc", signUpCredentails);
+ 
 
     try {
-      console.log("im the handle submit");
+ 
 
       const response = await handleLogin(signUpCredentails);
-      console.log(response);
+  
       if (response?.status === "success") {
         setWrongInfo(false)
         router.push("/notes");
       } else {
-        console.log("here is the response", response?.status);
+     
         setWrongInfo(true)
       }
     } catch (err) {
-      console.log("error in the comp", err);
+      
     }
   };
   return (

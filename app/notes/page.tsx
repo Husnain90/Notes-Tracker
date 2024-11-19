@@ -1,6 +1,5 @@
 import React from "react";
 import Notes from "../components/Notes";
-import CreateNotes from "../components/CreateNotes";
 import Link from "next/link";
 const Page = () => {
   return (
