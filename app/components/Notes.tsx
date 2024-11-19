@@ -40,9 +40,12 @@ const Notes = () => {
                 >
                   Update
                 </Link>
-                <button className="bg-red-600 w-[100px] rounded-md h-[50px] text-white flex justify-center items-center">
+                <Link
+                  className="bg-red-600 w-[100px] rounded-md h-[50px] text-white flex justify-center items-center"
+                  href={`/deleteNote/${note._id}`}
+                >
                   Delete
-                </button>
+                </Link>
               </div>
             </li>
           ))}
