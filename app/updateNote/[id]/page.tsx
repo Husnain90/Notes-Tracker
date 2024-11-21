@@ -12,7 +12,6 @@ const page = async ({ params }: props) => {
   let category: string = "";
 
   const data = await getNoteData(params.id);
-  console.log(data?.note.data);
   title = data?.note.data.title;
   content = data?.note.data.content;
   category = data?.note.data.category;

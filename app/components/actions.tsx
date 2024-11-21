@@ -1,7 +1,6 @@
 "use server";
 
 import axiosInstance from "@/utils/axiosInstance";
-import axios from "axios";
 import { cookies } from "next/headers";
 export const fetchNotes = async () => {
   const cookieStore = await cookies();

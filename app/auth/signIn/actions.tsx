@@ -30,6 +30,7 @@ export const handleLogin = async (credentails: {
     const data = response.data;
     if(data.token){
       cookieStore.set("token",data.token,{httpOnly :true})
+      cookieStore.set("role",data.role)
     }
 
 

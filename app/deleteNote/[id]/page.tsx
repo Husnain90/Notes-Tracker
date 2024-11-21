@@ -20,7 +20,6 @@ const page = () => {
     const fetchData = async () => {
       if (typeof id === "string") {
         const fetchedData = await getNoteData(id);
-        console.log(fetchedData?.note.data);
         setData(fetchedData?.note.data);
       }
     };
@@ -35,11 +34,11 @@ const page = () => {
         }
         else
         {
-            console.log("error occuerd")
+           
         }
       }
     } catch( err){
-        console.log(err)
+        
     }
   };
 

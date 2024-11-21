@@ -14,7 +14,7 @@ export const getNoteData = async (id: string ) => {
     },
   };
   try {
-    const response = await axiosInstance.get(`/note/${id}`)
+    const response = await axiosInstance.get(`/note/${id}`,config)
     if (response.status === 200) {
       return {note: response.data };
     }
@@ -29,7 +29,7 @@ export const updateNotes = async (formData :FormData)=>{
   const content = formData.get("content");
   const category = formData.get("category");
   const id = formData.get("id");
-  console.log("id in the handler", id);
+
 
 const cookieStore = await cookies();
 const token = cookieStore.get("token");
@@ -51,7 +51,6 @@ try {
    return {updated:true}
   }
 } catch (err) {
-  console.error("Error updating the note:", err);
   return {updated:false}
 }
 }

@@ -1,5 +1,5 @@
 "use server"
-import axios from "axios";
+import axiosInstance from "@/utils/axiosInstance";
 import { cookies } from "next/headers";
 
 export const deleteNote = async (id:string)=>{
@@ -13,17 +13,16 @@ const config = {
 };
 
 try {
-  const response = await axios.delete(
+  const response = await axiosInstance.delete(
     `http://localhost:5000/api/v1/note/${id}`,
    
     config
   );
   if (response.status === 200) {
-    // console.log("the response ", response.status);
+ 
     return { delete: true };
   }
 } catch (err) {
-  console.error("Error updating the note:", err);
   return { delete: false };
 }
 }
